@@ -18,6 +18,7 @@ import JWT
 
 final class UserController {
     let droplet: Droplet
+    
     init(_ droplet: Droplet) {
         self.droplet = droplet
     }
