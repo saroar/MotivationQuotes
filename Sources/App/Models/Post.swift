@@ -1,5 +1,6 @@
 import Vapor
 import FluentProvider
+import PostgreSQLProvider
 import HTTP
 
 final class Post: Model {

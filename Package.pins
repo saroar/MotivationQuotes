@@ -2,6 +2,18 @@
   "autoPin": true,
   "pins": [
     {
+      "package": "Auth",
+      "reason": null,
+      "repositoryURL": "https://github.com/vapor/auth.git",
+      "version": "1.0.0"
+    },
+    {
+      "package": "AuthProvider",
+      "reason": null,
+      "repositoryURL": "https://github.com/vapor/auth-provider.git",
+      "version": "1.0.2"
+    },
+    {
       "package": "BCrypt",
       "reason": null,
       "repositoryURL": "https://github.com/vapor/bcrypt.git",
@@ -12,6 +24,12 @@
       "reason": null,
       "repositoryURL": "https://github.com/vapor/bits.git",
       "version": "1.0.0"
+    },
+    {
+      "package": "CPostgreSQL",
+      "reason": null,
+      "repositoryURL": "https://github.com/vapor-community/cpostgresql.git",
+      "version": "2.0.0"
     },
     {
       "package": "CTLS",
@@ -53,7 +71,7 @@
       "package": "Fluent",
       "reason": null,
       "repositoryURL": "https://github.com/vapor/fluent.git",
-      "version": "2.0.4"
+      "version": "2.1.0"
     },
     {
       "package": "FluentProvider",
@@ -68,6 +86,18 @@
       "version": "2.0.2"
     },
     {
+      "package": "JWT",
+      "reason": null,
+      "repositoryURL": "https://github.com/vapor/jwt.git",
+      "version": "2.1.1"
+    },
+    {
+      "package": "JWTProvider",
+      "reason": null,
+      "repositoryURL": "https://github.com/vapor/jwt-provider.git",
+      "version": "1.0.1"
+    },
+    {
       "package": "Multipart",
       "reason": null,
       "repositoryURL": "https://github.com/vapor/multipart.git",
@@ -78,6 +108,24 @@
       "reason": null,
       "repositoryURL": "https://github.com/vapor/node.git",
       "version": "2.0.3"
+    },
+    {
+      "package": "PostgreSQL",
+      "reason": null,
+      "repositoryURL": "https://github.com/vapor-community/postgresql.git",
+      "version": "2.0.1"
+    },
+    {
+      "package": "PostgreSQLDriver",
+      "reason": null,
+      "repositoryURL": "https://github.com/vapor/postgresql-driver.git",
+      "version": "2.0.1"
+    },
+    {
+      "package": "PostgreSQLProvider",
+      "reason": null,
+      "repositoryURL": "https://github.com/vapor-community/postgresql-provider.git",
+      "version": "2.0.0"
     },
     {
       "package": "Random",
@@ -113,7 +161,7 @@
       "package": "Vapor",
       "reason": null,
       "repositoryURL": "https://github.com/vapor/vapor.git",
-      "version": "2.0.6"
+      "version": "2.0.8"
     }
   ],
   "version": 1
