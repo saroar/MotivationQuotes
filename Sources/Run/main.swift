@@ -1,6 +1,4 @@
 import App
-import PostgreSQLProvider
-
 
 let config = try Config()
 try config.setup()
