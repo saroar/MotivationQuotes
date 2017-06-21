@@ -11,11 +11,6 @@ import HTTP
 import AuthProvider
 import JWT
 
-import Vapor
-import HTTP
-import AuthProvider
-import JWT
-
 final class UserController {
     let droplet: Droplet
     
@@ -53,6 +48,7 @@ final class UserController {
         guard let email = request.data["email"]?.string, let password = request.data["password"]?.string else {
             return try Response(status: .badRequest, json: JSON(node: ["error": "Missing email or password"]))
         }
+
         let credentials = Password(username: email, password: password)
         let user = try User.authenticate(credentials)
         request.auth.authenticate(user)
