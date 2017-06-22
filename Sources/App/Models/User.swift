@@ -177,6 +177,16 @@ extension User: PayloadAuthenticatable {
   }
 }
 
+extension User: NodeRepresentable {
+  func makeNode(in context: Context) throws -> Node {
+    var node = Node(context)
+    try node.set("id", id)
+    try node.set("email", email)
+    try node.set("password", password)
+    return node
+  }
+}
+
 extension User {
   func profile() throws -> Profile? {
     return try children().first()

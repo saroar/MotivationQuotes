@@ -19,7 +19,6 @@ final class ProfileController: ResourceRepresentable {
   
   func create(request: Request) throws -> ResponseRepresentable {
     let profile = try request.profile()
-    print(profile)
     try profile.save()
     return profile
   }

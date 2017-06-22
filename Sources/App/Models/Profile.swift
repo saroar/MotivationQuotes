@@ -81,7 +81,20 @@ extension Profile {
   }
 }
 
+extension Profile: NodeRepresentable {
+  func makeNode(in context: Context) throws -> Node {
+    var node = Node(context)
+    try node.set(Properties.id, id)
+    try node.set(Properties.firstName, firstName)
+    try node.set(Properties.middleName, middleName)
+    try node.set(Properties.lastName, lastName)
+    try node.set(Properties.dateOfBirth, dateOfBirth)
+    return node
+  }
+}
+
 // Mark JSON
+
 extension Profile: JSONConvertible {
   convenience init(json: JSON) throws {
     try self.init(
@@ -89,10 +102,12 @@ extension Profile: JSONConvertible {
       middleName:  json.get(Properties.middleName),
       lastName:    json.get(Properties.lastName),
       dateOfBirth: json.get(Properties.dateOfBirth),
-      user:        User.find(json.get("user"))!
+      user:        User.find(json.get("user_id"))!
     )
   }
-  
+}
+
+extension Profile: JSONRepresentable {
   func makeJSON() throws -> JSON {
     var json = JSON()
     try json.set(Properties.id, id)
